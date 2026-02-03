@@ -1,9 +1,10 @@
-const city = document.querySelector("#city")
-const form = document.querySelector("#citySelector")
-const button = document.querySelector("#sndButton")
-const result = document.querySelector("#result")
-const apikey === "f5b3a3b62f174142aa012051260302"
-cityNameCall = city.split("-")[0];
+const city = document.querySelector("#city");
+const form = document.querySelector("#citySelector");
+const button = document.querySelector("#sndButton");
+const result = document.querySelector("#result");
+const apiKey = "f5b3a3b62f174142aa012051260302";
+const cityString = city.value.trim();
+const cityNameCall = city.split("-")[0];
 
 function resultMsg(cidade) {
   if (cidade === "") {
@@ -26,9 +27,23 @@ async function buscarPrevisao(cidade) {
   return data;
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault()
-  const selectedCity = city.value.trim()
-  resultMsg(selectedCity)
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const selectedCity = city.value.trim();
+  const cityNameCall = selectedCity.split("-")[0];
+
+  // feedback imediato
+  result.textContent = resultMsg(cityNameCall);
+
+  try {
+    const data = await buscarPrevisao(cityNameCall);
+
+    const temp = data.current.temp_c;
+    const cond = data.current.condition.text;
+
+    result.textContent = `Agora em ${data.location.name}: ${temp}°C — ${cond}`;
+  } catch (error) {
+    result.textContent = "Erro ao buscar previsão.";
   }
-)         
+});  
