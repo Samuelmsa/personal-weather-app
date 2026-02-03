@@ -1,5 +1,3 @@
-alert("js carregado")
-
 const city = document.querySelector("#city")
 const form = document.querySelector("#citySelector")
 const result = document.querySelector("#result")
@@ -12,4 +10,5 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const selectedCity = city.value.trim();
   result.textContent = resultMsg(selectedCity);
-}
+  }
+)
