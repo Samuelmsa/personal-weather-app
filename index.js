@@ -1,3 +1,5 @@
+alert("js carregado")
+
 const city = document.querySelector("#city")
 const form = document.querySelector("#citySelector")
 const result = document.querySelector("#result")
