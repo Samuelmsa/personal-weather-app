@@ -1,10 +1,8 @@
 const city = document.querySelector("#city");
 const form = document.querySelector("#citySelector");
-const button = document.querySelector("#sndButton");
 const result = document.querySelector("#result");
 const apiKey = "f5b3a3b62f174142aa012051260302";
-const cityString = city.value.trim();
-const cityNameCall = city.split("-")[0];
+
 
 function resultMsg(cidade) {
   if (cidade === "") {
