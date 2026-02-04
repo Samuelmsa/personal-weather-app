@@ -8,8 +8,7 @@ body {
   margin:0;
   background-image: linear-gradient(
       rgba(128, 128, 128, 0.6),
-      rgba(128, 128, 128, 0.6)
-    ), url("https://s3.static.brasilescola.uol.com.br/be/2022/09/paisagem-ceu-tempestuoso.jpg");
+      rgba(128, 128, 128, 0.6)), url("https://s3.static.brasilescola.uol.com.br/be/2022/09/paisagem-ceu-tempestuoso.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,4 +34,13 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 50px;
+}
+
+.weatherCard {
+  display: flex;
+  flex-direction: row;
+  align-item: center;
+  background-color: gray;
+  margin-top: 40px;
+  padding-bottom: 40px;
 }
