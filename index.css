@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  min-height: 100vh;
+  margin:0;
+  background-image: linear-gradient(
+      rgba(128, 128, 128, 0.6),
+      rgba(128, 128, 128, 0.6)
+    ), url("https://s3.static.brasilescola.uol.com.br/be/2022/09/paisagem-ceu-tempestuoso.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.siteTitle {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weatherToday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
