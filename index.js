@@ -1,6 +1,5 @@
 const city = document.querySelector("#city");
 const form = document.querySelector("#citySelector");
-const result = document.querySelector("#result");
 const weatherIcon = document.querySelector("#weather-icon")
 const weatherText = document.querySelector("#weather-text")
 const apiKey = "f5b3a3b62f174142aa012051260302";
