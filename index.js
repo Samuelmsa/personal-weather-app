@@ -1,6 +1,8 @@
 const city = document.querySelector("#city");
 const form = document.querySelector("#citySelector");
 const weatherIcon = document.querySelector("#weather-icon")
+const weatherGeneral = document.querySelector("#weather-general")
+const weatherTemp = document.querySelector("#weather-temp")
 const weatherText = document.querySelector("#weather-text")
 const apiKey = "f5b3a3b62f174142aa012051260302";
 
@@ -33,17 +35,23 @@ form.addEventListener("submit", async (event) => {
   const cityNameCall = selectedCity.split("-")[0];
 
   // feedback imediato
-  weatherText.textContent = resultMsg(cityNameCall);
+  weatherGeneral.textContent = resultMsg(cityNameCall);
+  weatherTemp.textContent = "";
+  weatherText.textContent = "";
 
   try {
     const data = await buscarPrevisao(cityNameCall);
     const iconUrl = data.current.condition.icon;
     const temp = data.current.temp_c;
     const cond = data.current.condition.text;
-    weatherText.textContent = `Agora em ${data.location.name}: ${temp}°C — ${cond}`;
+    weatherGeneral.textContent = `Agora em ${data.location.name}:`;
+    weatherTemp.textContent = `${temp}°C`;
+    weatherText.textContent = cond;
     weatherIcon.src = `https:${iconUrl}`;
     
   } catch (error) {
-    weatherText.textContent = "Erro ao buscar previsão.";
+    weatherGeneral.textContent = "Erro ao buscar previsão.";
+    weatherTemp.textContent = "";
+    weatherText.textContent = "";
   }
 });  
