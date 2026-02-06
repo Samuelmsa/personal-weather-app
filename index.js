@@ -32,7 +32,7 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const selectedCity = city.value.trim();
-  const cityNameCall = selectedCity.split("-")[0];
+  const cityNameCall = selectedCity;
 
   // feedback imediato
   weatherGeneral.textContent = resultMsg(cityNameCall);

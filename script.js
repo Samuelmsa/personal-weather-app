@@ -6,7 +6,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-
 const cities = {
   rio_branco: { name: 'Rio Branco, AC', lat: -9.9754, lng: -67.8249, metar: 'SBRB' },
   maceio: { name: 'Maceió, AL', lat: -9.6498, lng: -35.7089, metar: 'SBMO' },
