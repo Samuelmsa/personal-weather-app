@@ -8,7 +8,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 const cities = {
-const cities = {
   rio_branco: { name: 'Rio Branco, AC', lat: -9.9754, lng: -67.8249, metar: 'SBRB' },
   maceio: { name: 'Maceió, AL', lat: -9.6498, lng: -35.7089, metar: 'SBMO' },
   macapa: { name: 'Macapá, AP', lat: 0.0349, lng: -51.0694, metar: 'SBMQ' },
@@ -37,7 +36,7 @@ const cities = {
   palmas: { name: 'Palmas, TO', lat: -10.1840, lng: -48.3336, metar: 'SBPJ' },
   sao_paulo: { name: 'São Paulo, SP', lat: -23.5505, lng: -46.6333, metar: 'SBSP' }
 };
-const select = document.getElementById('citySelect');
+const select = document.getElementById('city');
 let marker;
 
 select.addEventListener('change', () => {
@@ -60,6 +59,5 @@ select.addEventListener('change', () => {
     .bindPopup(city.name)
     .openPopup();
 });
-
 
 
