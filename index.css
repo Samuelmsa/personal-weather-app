@@ -15,7 +15,7 @@ html, body {
 body {
   background-image:
     linear-gradient(rgba(130,130,130,0.5), rgba(130,130,130,0.5)),
-    url("/images/background_clean.png"); /* troque pela sua imagem */
+    url("/images/background_serene.png"); /* troque pela sua imagem */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
