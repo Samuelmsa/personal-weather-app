@@ -35,7 +35,7 @@ const cities = {
   palmas: { name: 'Palmas, TO', lat: -10.1840, lng: -48.3336, metar: 'SBPJ' },
   sao_paulo: { name: 'São Paulo, SP', lat: -23.5505, lng: -46.6333, metar: 'SBSP' }
 };
-const select = document.getElementById('citySelect');
+const select = document.getElementById('city');
 let marker;
 
 select.addEventListener('change', () => {
@@ -43,6 +43,7 @@ select.addEventListener('change', () => {
   if (!cityKey) return;
 
   const city = cities[cityKey];
+  if (!city) return;
 
   // Centraliza o mapa
   map.setView([city.lat, city.lng], 12);
