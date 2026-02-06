@@ -7,13 +7,23 @@
     <link rel="icon" href="/images/cloud_icon-icons.com_60698.png" type="image/png">
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
   </head>
   <body>
     <div class="wrapper">
       <h1 class="siteTitle"> Weather Today</h1>
       <div class="mainMenu">
         <form id="citySelector">
-          <label for="city">Selecione a cidade:</label>
+          <label for="city">Selecione uma capital:</label>
           <select name="city" id="city" required>
             <option value="" disabled selected> </option>
             <option value="metar:SBRB">Rio Branco, AC</option>
@@ -54,8 +64,11 @@
           <p id="weather-temp"></p>
           <p id="weather-text"></p>
         </div>
+      <div id="map"></div>
       </div>
     </div>
    <script src="index.js"></script>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script src="script.js"></script>
   </body>
 </html>
